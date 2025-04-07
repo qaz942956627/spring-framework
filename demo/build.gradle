@@ -1,0 +1,27 @@
+plugins {
+    id 'java'
+}
+
+group = 'com.lu'
+version = '5.3.29-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation(project(':spring-context'))
+    implementation(project(':spring-core'))
+    implementation(project(':spring-web'))
+    implementation(project(':spring-oxm'))
+    implementation(project(':spring-aop'))
+    implementation(project(':spring-beans'))
+    implementation(project(":spring-instrument"))
+//    implementation 'org.springframework:spring-objenesis-repack:3.2'
+    testImplementation platform('org.junit:junit-bom:5.9.1')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+}
+
+test {
+    useJUnitPlatform()
+}
